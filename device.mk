@@ -21,7 +21,7 @@
 # definition file).
 #
 
-$(call inherit-product-if-exists, vendor/oppo/r9s/r9s-vendor.mk)
+$(call inherit-product-if-exists, vendor/oppo/r9s_plus/r9s_plus-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -143,10 +143,10 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    copybit.msm8953 \
-    gralloc.msm8953 \
-    hwcomposer.msm8953 \
-    memtrack.msm8953 \
+    copybit.msm8976 \
+    gralloc.msm8976 \
+    hwcomposer.msm8976 \
+    memtrack.msm8976 \
     liboverlay \
     libtinyxml
 
@@ -172,7 +172,7 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    gps.msm8953 \
+    gps.msm8976 \
     libgnsspps
 
 PRODUCT_COPY_FILES += \
@@ -206,7 +206,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    lights.msm8953
+    lights.msm8976
 
 # LiveDisplay native
 PRODUCT_PACKAGES += \
@@ -239,7 +239,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.msm8953
+    power.msm8976
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -281,7 +281,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    sensors.msm8953
+    sensors.msm8976
 
 # Wifi
 PRODUCT_PACKAGES += \
