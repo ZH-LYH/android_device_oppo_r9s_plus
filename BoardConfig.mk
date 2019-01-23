@@ -22,9 +22,9 @@
 #
 
 # Assertions
-TARGET_OTA_ASSERT_DEVICE := r9s,R9s,r9sk,R9sk
+TARGET_OTA_ASSERT_DEVICE := r9s_plus
 
-PLATFORM_PATH := device/oppo/r9s
+PLATFORM_PATH := device/oppo/r9s_plus
 
 TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
 
@@ -32,19 +32,19 @@ TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
 TARGET_USE_SDCLANG := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := msm8953
+TARGET_BOOTLOADER_BOARD_NAME := msm8976
 TARGET_NO_BOOTLOADER := true
 
 # Platform
-TARGET_BOARD_PLATFORM := msm8953
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno506
+TARGET_BOARD_PLATFORM := msm8976
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno510
 
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := generic
+TARGET_CPU_ABI2 := armeabi
+TARGET_CPU_VARIANT := cortex-a72
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv7-a-neon
@@ -58,6 +58,8 @@ TARGET_USES_64_BIT_BINDER := true
 
 TARGET_BOARD_SUFFIX := _64
 
+
+#Kernel信息未修改
 # Kernel
 BOARD_CUSTOM_BOOTIMG_MK := $(PLATFORM_PATH)/boot/custombootimg.mk
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlyprintk androidboot.selinux=permissive ramoops.mem_address=0x8ff00000 ramoops.mem_size=0x100000 ramoops.record_size=0x20000 ramoops.console_size=0x20000 ramoops.dump_oops=0
@@ -70,8 +72,8 @@ TARGET_KERNEL_APPEND_DTB := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --kernel_offset 0x00008000
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-#TARGET_KERNEL_SOURCE := kernel/oppo/r9s
-#TARGET_KERNEL_CONFIG := cyanogenmod_r9s_defconfig
+#TARGET_KERNEL_SOURCE := kernel/oppo/r9s_plus
+#TARGET_KERNEL_CONFIG := cyanogenmod_r9s_plus_defconfig
 #TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 # QCOM hardware
@@ -170,8 +172,8 @@ TARGET_NO_RPC := true
 USE_DEVICE_SPECIFIC_GPS := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_r9s
-TARGET_RECOVERY_DEVICE_MODULES := libinit_r9s
+TARGET_INIT_VENDOR_LIB := libinit_r9s_plus
+TARGET_RECOVERY_DEVICE_MODULES := libinit_r9s_plus
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 
 # Keystore
@@ -183,6 +185,8 @@ TARGET_PROVIDES_LIBLIGHT := true
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
 
+
+#分区表信息 未修改
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -229,4 +233,4 @@ WIFI_DRIVER_MODULE_NAME := "wlan"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # inherit from the proprietary version
--include vendor/oppo/r9s/BoardConfigVendor.mk
+-include vendor/oppo/r9s_plus/BoardConfigVendor.mk
