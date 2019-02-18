@@ -19,7 +19,7 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := optional
 LOCAL_C_INCLUDES := system/core/init
-LOCAL_SRC_FILES := init_r9s.cpp
-LOCAL_MODULE := libinit_r9s
+LOCAL_SRC_FILES := init_r9s_plus.cpp
+LOCAL_MODULE := libinit_r9s_plus
 
 include $(BUILD_STATIC_LIBRARY)

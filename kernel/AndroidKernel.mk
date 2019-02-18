@@ -3,7 +3,7 @@ PERL		= perl
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 
-LOCAL_PRIVATE_PATH := device/oppo/r9s/kernel
+LOCAL_PRIVATE_PATH := device/oppo/r9s_plus/kernel
 
 TARGET_KERNEL_ARCH := $(strip $(TARGET_KERNEL_ARCH))
 ifeq ($(TARGET_KERNEL_ARCH),)
